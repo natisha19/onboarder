@@ -1,0 +1,43 @@
+.employee-tasks-container {
+  padding: 24px;
+}
+.dashboard-cards {
+  display: flex;
+  gap: 24px;
+  margin-bottom: 32px;
+}
+.dashboard-card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 22px 36px;
+  min-width: 180px;
+  box-shadow: 0 2px 12px #f1f1f1;
+}
+.card-title { font-size: 16px; color: #888; }
+.card-value { font-size: 2rem; color: #232323; }
+.card-sub { font-size: 15px; margin-top: 7px; }
+.projects-section { background: #fff; border-radius: 10px; padding: 28px; }
+.section-header { display: flex; justify-content: space-between; align-items: center; }
+.create-btn {
+  background: #f7f6ff;
+  color: #7d5fff;
+  border: none;
+  padding: 8px 22px;
+  border-radius: 4px;
+  font-weight: 500;
+  cursor: pointer;
+}
+.projects-table { width: 100%; border-collapse: collapse; margin-top: 16px; }
+.projects-table th, .projects-table td { padding: 11px 14px; text-align: left; }
+.project-icon { margin-right: 9px; font-size: 20px; }
+.priority-label {
+  color: #fff;
+  border-radius: 10px;
+  padding: 3px 11px;
+  font-size: 12px;
+  font-weight: bold;
+}
+.avatars .avatar { background: #eee; border-radius: 50%; padding: 3px 6px; margin-right: 6px; }
+.progress-bar-outer { background: #eee; width: 80px; height: 7px; border-radius: 5px; display: inline-block; margin-right: 6px; }
+.progress-bar-inner { height: 100%; border-radius: 5px; }
+.view-all { color: #7d5fff; text-align: right; margin-top: 19px; cursor: pointer; }
