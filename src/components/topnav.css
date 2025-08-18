@@ -1,0 +1,30 @@
+.topnav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+  border-bottom: 1px solid #ddd;
+  padding: 10px 20px;
+}
+
+.logo {
+  font-weight: bold;
+  color: #3b5998;
+  font-size: 18px;
+}
+
+.nav-links a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: #3b3b3b;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.avatar {
+  border-radius: 50%;
+}

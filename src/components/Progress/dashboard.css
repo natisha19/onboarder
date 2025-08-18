@@ -1,0 +1,89 @@
+.dashboard {
+  flex: 1;
+  padding: 20px;
+}
+
+.progress-section {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 20px;
+}
+
+.table-section {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.table-controls {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.table-controls input {
+  padding: 6px 10px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+}
+
+.table-controls button {
+  padding: 6px 12px;
+  border: 1px solid #ddd;
+  background: #f8f8f8;
+  cursor: pointer;
+}
+
+.table-section table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table-section th,
+.table-section td {
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+  text-align: left;
+}
+
+.avatar {
+  border-radius: 50%;
+}
+
+.status {
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: 12px;
+}
+
+.status.completed {
+  background: #d1fae5;
+  color: #065f46;
+}
+
+.status.in-progress {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.status {
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: 12px;
+}
+
+.status.completed {
+  background: #d1fae5;
+  color: #065f46;
+}
+
+.status.in-progress {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.status.not-started {
+  background: #fee2e2;
+  color: #991b1b;
+}
