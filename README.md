@@ -28,4 +28,6 @@ The platform reduces manual effort and speeds up project delivery across diverse
 ## Project Status
 - **Frontend**: React-based pages for core modules completed.  
 - **UI/UX Prototype**: Submitted via Figma.  
-- **Deployment**: In progress via Vercel.  
+- **Deployment**: In progress via Vercel.
+
+**You can visit our figma designs at:** https://www.figma.com/design/uFjKQfCJO2Cw5fvzH1m05Z/ShadowCoachATOS?node-id=0-1&p=f&t=6nBNDbCXQH6nKoWs-0
