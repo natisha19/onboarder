@@ -1,32 +1,31 @@
-// components/NewHireDetails.js
+// components/EmployeeDetails.js
 import React, { useState, useEffect } from "react";
 import "./newhiredetails.css";
 
-function NewHireDetails() {
-  const [hires, setHires] = useState([]);
+function EmployeeDetails() {
+  const [employees, setEmployees] = useState([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    // Replace /api/employees with your actual API endpoint on your server
     fetch("/api/employees")
       .then((res) => res.json())
       .then((data) => {
-        // Assuming your server sends an array of hires/employees
-        setHires(data);
+        console.log("Employees fetched:", data); // Debug log
+        setEmployees(data);
         setLoading(false);
       })
       .catch((err) => {
-        console.error("Failed to fetch hires", err);
+        console.error("Failed to fetch employees", err);
         setLoading(false);
       });
   }, []);
 
-  if (loading) return <div>Loading hires...</div>;
+  if (loading) return <div>Loading employees...</div>;
 
   return (
-    <div className="new-hire-details">
+    <div className="employee-details">
       <div className="search-filter">
-        <input type="text" placeholder="Search hires..." />
+        <input type="text" placeholder="Search employees..." />
         <button>Filter</button>
       </div>
 
@@ -34,34 +33,29 @@ function NewHireDetails() {
         <thead>
           <tr>
             <th>Task</th>
-            <th>Owner</th>
             <th>Name</th>
+            <th>Supervisor</th>
             <th>Last Modified</th>
           </tr>
         </thead>
-        <tbody>
-          {hires.map((hire) => (
-            <tr key={hire._id || hire.id}>
-              <td>{hire._id || hire.id}</td>
-              <td>
-                <img
-                  src={hire.owner || `https://i.pravatar.cc/40?u=${hire.email || hire._id}`}
-                  alt="owner"
-                  className="avatar"
-                />
-              </td>
-              <td>{hire.name || hire.fullName || "No Name"}</td>
-              <td>
-                {hire.modified
-                  ? new Date(hire.modified).toLocaleString()
-                  : "No Date"}
-              </td>
-            </tr>
-          ))}
-        </tbody>
+            <tbody>
+      {employees.map((employee) => (
+        <tr key={employee._id}>
+          <td>{employee._id}</td>
+          <td>{employee.name || "No Name"}</td>
+          <td>{employee.owner || "No Supervisor"}</td>
+          <td>
+            {employee.startDate
+              ? new Date(employee.startDate).toLocaleString()
+              : "No Date"}
+          </td>
+        </tr>
+      ))}
+    </tbody>
+
       </table>
     </div>
   );
 }
 
-export default NewHireDetails;
+export default EmployeeDetails;
